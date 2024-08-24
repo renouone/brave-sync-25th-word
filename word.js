@@ -11,9 +11,12 @@ export function getTime(element) {
 			hour: "2-digit",
 			minute: "2-digit",
 			second: "2-digit",
-			timeZoneName: "short"
+			timeZoneName: "short",
+			timeZone: "Etc/GMT"
 		};
 		const formattedTime = new Intl.DateTimeFormat('en-GB', options).format(date);
+
+		element.textContent = formattedTime;
 	}
 
 	updateTime();
